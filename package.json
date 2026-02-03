@@ -1,0 +1,32 @@
+{
+  "name": "edubrowser",
+  "version": "0.1.0",
+  "description": "A browser built for learning, teaching, and focus.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "concurrently \"npm:watch:renderer\" \"npm:start\"",
+    "watch:renderer": "vite",
+    "build:renderer": "vite build",
+    "lint": "eslint --ext .js,.jsx src",
+    "format": "prettier --write \"src/**/*.{js,jsx,css,html}\"",
+    "package": "electron-builder"
+  },
+  "author": "Keith Nyarunda",
+  "license": "MIT",
+  "dependencies": {
+    "electron-store": "^8.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0",
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.0",
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.0.0"
+  }
+}
